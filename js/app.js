@@ -61,20 +61,23 @@ $(document).ready(loadPage)
 
 function loadPage() {
     $('.slider').slider();
-    $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cochinitos"&maxResults=10&langRestrict=es', function(data) {
-        paintBookCard(data)
-    });
-    /*
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cuentos"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
     });
-    $.getJSON('https://www.googleapis.com/books/v1/volumes?q="herweck+rice"&maxResults=10&langRestrict=es', function(data) {
-        paintBookCard(data)
-    });
-    $.getJSON('https://www.googleapis.com/books/v1/volumes?q="sarah+kartchner"&maxResults=10&langRestrict=es', function(data) {
-        paintBookCard(data)
-    });
-    */
+
+    /*
+        $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cochinitos"&maxResults=10&langRestrict=es', function(data) {
+            paintBookCard(data)
+        });
+        
+        
+        $.getJSON('https://www.googleapis.com/books/v1/volumes?q="herweck+rice"&maxResults=10&langRestrict=es', function(data) {
+            paintBookCard(data)
+        });
+        $.getJSON('https://www.googleapis.com/books/v1/volumes?q="sarah+kartchner"&maxResults=10&langRestrict=es', function(data) {
+            paintBookCard(data)
+        });
+        */
     $('#search-book').keyup(filterBooks)
     $('.modal').modal();
 
@@ -148,8 +151,10 @@ function sendReview() {
 
 
 function paintReviews() {
+
     var $title = ($(this).find('.title').text())
     var reviews = firebase.database().ref("reviews/");
+
     reviews.on("value", function(snapshot) {
         var obj = snapshot.val()
         for (var i in obj) {
