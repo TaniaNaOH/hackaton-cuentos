@@ -98,6 +98,7 @@ function paintBookCard(data) {
         }
     }
     $('.open-modal').click(paintModal)
+    $('.open-modal').click(paintReviews)
 }
 
 function filterBooks() {
@@ -135,4 +136,19 @@ function sendReview() {
         title: title,
         review: review
     })
+}
+
+function paintReviews() {
+
+    var reviews = firebase.database().ref("reviews/");
+    reviews.on("value", function(snapshot) {
+        var obj = snapshot.val()
+        console.log(obj)
+            /* for (var i in obj) {
+            console.log(obj[i]['title'])
+        }
+*/
+
+    })
+
 }
