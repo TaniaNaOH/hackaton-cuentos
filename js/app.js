@@ -6,15 +6,13 @@ var config = {
     storageBucket: "conchita-344a5.appspot.com",
     messagingSenderId: "442852674055"
 };
-
 firebase.initializeApp(config);
 
 var provider = new firebase.auth.GoogleAuthProvider();
 $('#google').click(function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
         guardaDatos(result.user)
-        window.location.href = '../views/home.html'
-
+        console.log(result.user)
     })
 })
 
@@ -63,13 +61,9 @@ $(document).ready(loadPage)
 function loadPage() {
     $('.modal').modal();
     $('.slider').slider();
-    //$('a').click(paintModal)
-
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cochinitos"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
     });
-
-    /*
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cuentos"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
     });
@@ -79,8 +73,6 @@ function loadPage() {
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="sarah+kartchner"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
     });
-
-    */
     $('#search-book').keyup(filterBooks)
 
 }
@@ -104,7 +96,6 @@ function paintBookCard(data) {
             $bookLink.append($author)
             $bookLink.append($date)
         }
-
     }
     $('.open-modal').click(paintModal)
 }
