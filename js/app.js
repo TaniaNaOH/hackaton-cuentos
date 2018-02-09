@@ -52,17 +52,24 @@ function signUp(e) {
 }
 
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('.slider').slider();
-});
+    $('a').click(paintModal)
+});*/
 
 
 $(document).ready(loadPage)
 
 function loadPage() {
+    $('.modal').modal();
+    $('.slider').slider();
+    //$('a').click(paintModal)
+
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cochinitos"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
     });
+
+    /*
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cuentos"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
     });
@@ -72,6 +79,8 @@ function loadPage() {
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="sarah+kartchner"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
     });
+
+    */
     $('#search-book').keyup(filterBooks)
 
 }
@@ -81,10 +90,10 @@ function paintBookCard(data) {
         if (data['items'][i]['volumeInfo']['imageLinks']) {
             var $bookImage = $('<img />').attr('src', data['items'][i]['volumeInfo']['imageLinks']['smallThumbnail'])
             var $bookDiv = $('<div />', { 'class': 'book-card' })
-            var $bookLink = $('<a />', { 'class': 'waves-effect waves-light modal-trigger' })
+            var $bookLink = $('<a />', { 'class': 'waves-effect waves-light modal-trigger open-modal' })
             $bookLink.attr('href', '#modal1')
             var $title = $('<h3 />').text(data['items'][i]['volumeInfo']['title'])
-            var $date = $('<p />').text(data['items'][i]['volumeInfo']['publishedDate'])
+            var $date = $('<p />', { 'class': 'date' }).text(data['items'][i]['volumeInfo']['publishedDate'])
             if (data['items'][i]['volumeInfo']['authors']) {
                 var $author = $('<p />').text(data['items'][i]['volumeInfo']['authors'][0])
             }
@@ -95,7 +104,9 @@ function paintBookCard(data) {
             $bookLink.append($author)
             $bookLink.append($date)
         }
+
     }
+    $('.open-modal').click(paintModal)
 }
 
 function filterBooks() {
@@ -107,4 +118,11 @@ function filterBooks() {
             $(this).closest('div').show()
         }
     })
+}
+
+
+
+
+function paintModal() {
+    console.log($(this).find('.date').text())
 }
