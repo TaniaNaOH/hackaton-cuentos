@@ -15,6 +15,8 @@ $('#google').click(function() {
     })
 })
 
+
+
 function guardaDatos(user) {
     var usuario = {
         uid: user.uid,
@@ -60,6 +62,7 @@ function signUp(e) {
 $(document).ready(loadPage)
 
 function loadPage() {
+
     $('.slider').slider();
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cuentos+niños"&maxResults=40&langRestrict=es', function(data) {
         paintBookCard(data)
@@ -110,8 +113,6 @@ function paintBookCard(data) {
 }
 
 
-
-
 function filterBooks() {
     var search = $('#search-book').val().trim().toLowerCase();
     $('h3').each(function() {
@@ -157,12 +158,11 @@ function paintReviews() {
     reviews.on("value", function(snapshot) {
         var obj = snapshot.val()
         for (var i in obj) {
-
             if ($title === obj[i]['title']) {
+                //  $('#reviews').empty()
                 var $reviewDiv = $('<p />').text(obj[i]['review'])
                 $('#reviews').append($reviewDiv)
             }
         }
     })
-
 }

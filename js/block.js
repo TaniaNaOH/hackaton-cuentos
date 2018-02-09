@@ -1,3 +1,14 @@
+var config = {
+    apiKey: "AIzaSyDdE1ReaIOr_OAGOjc9xglzpZSOCOuSts0",
+    authDomain: "conchita-344a5.firebaseapp.com",
+    databaseURL: "https://conchita-344a5.firebaseio.com",
+    projectId: "conchita-344a5",
+    storageBucket: "conchita-344a5.appspot.com",
+    messagingSenderId: "442852674055"
+};
+firebase.initializeApp(config);
+
+
 // //se mandan llamar elementos por su id o clase
 var $selectFragmentos = $('#fragmentos');
 var $contentText = $('#content-text');
@@ -9,9 +20,21 @@ var $buttonSendText = $('#send-text');
 function loadPage() {
     $selectFragmentos.change(fragmentos);
     $typeTextTarea.keyup(typeText);
+    // $buttonSendText.click(writeStory)
     $buttonSendText.click(sendText);
+
     $typeTextTarea.change()
 }
+/*
+function writeStory() {
+
+    storyId = new Date().getTime();
+    firebase.database().ref("stories/" + storyId).set({
+        user: localStorage.user,
+        story: $typeTextTarea
+    })
+}
+*/
 
 function fragmentos(e) {
     e.preventDefault();
