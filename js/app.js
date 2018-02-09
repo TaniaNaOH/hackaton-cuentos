@@ -154,7 +154,8 @@ function paintReviews() {
         var obj = snapshot.val()
         for (var i in obj) {
             if (obj[i]['title'] == $title) {
-                $('#reviews').append(obj[i]['review'])
+                var $reviewDiv = $('<p />').text(obj[i]['review'])
+                $('#reviews').append($reviewDiv)
             }
         }
 
