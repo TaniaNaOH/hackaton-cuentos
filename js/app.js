@@ -152,13 +152,13 @@ function sendReview() {
 
 function paintReviews() {
     $('#reviews').empty()
-    var $title = ($(this).find('.title').text())
     var reviews = firebase.database().ref("reviews/");
     reviews.on("value", function(snapshot) {
+        $('#reviews').empty();
+        var $title = $('.modal-content #title').text();
         var obj = snapshot.val()
         for (var i in obj) {
             if ($title === obj[i]['title']) {
-                //  $('#reviews').empty()
                 var $reviewDiv = $('<p />').text(obj[i]['review'])
                 $('#reviews').append($reviewDiv)
             }
