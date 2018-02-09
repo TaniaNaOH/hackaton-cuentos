@@ -12,7 +12,7 @@ var provider = new firebase.auth.GoogleAuthProvider();
 $('#google').click(function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
         guardaDatos(result.user)
-        console.log(result.user)
+        window.location.href = '../views/home.html'
     })
 })
 
