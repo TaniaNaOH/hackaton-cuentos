@@ -7,12 +7,17 @@ body {
 }
 
 .nav-wrapper,
-.nav-extended,
-footer {
+.nav-extended {
     background-image: url(../assets/img/cubos.jpg);
     font-size: 20px;
     font-weight: bold;
     position: relative;
+}
+
+footer {
+    background-image: url(../assets/img/cubos.jpg);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .slider .slides li img {
@@ -28,13 +33,20 @@ a,
     font-size: 40px;
 }
 
+.content-block {
+    height: 100vh;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
 #search-book {
     color: black;
     font-size: 30px;
     margin-top: 50px;
 }
 
-::placeholder {
+ ::placeholder {
     color: grey;
 }
 
@@ -69,10 +81,42 @@ body>footer>div.container>div>div>h5 {
     background-color: white;
 }
 
-h5,
+h3 {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h5 {
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-align: center;
+}
+
 h6 {
     color: black;
     font-size: 20px;
     background-color: white;
     font-weight: bold;
+}
+
+h7 {
+    color: black;
+    font-size: 25px;
+    background-color: white;
+    font-weight: bold;
+}
+
+#type-text {
+    background-image: url(../assets/img/hoja2.jpg);
+    border-radius: 8px;
+    height: 300px;
+}
+
+#send-text {
+    border-radius: 8px;
+    background-color: pink;
 }

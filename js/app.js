@@ -10,10 +10,11 @@ firebase.initializeApp(config);
 
 var provider = new firebase.auth.GoogleAuthProvider();
 $('#google').click(function() {
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        guardaDatos(result.user)
-    })
+    // firebase.auth().signInWithPopup(provider).then(function(result) {
+    //    guardaDatos(result.user)
+    window.location.href = "../views/home.html"
 })
+
 
 
 
@@ -53,10 +54,10 @@ function signUp(e) {
 }
 
 
-/*$(document).ready(function() {
+$(document).ready(function() {
     $('.slider').slider();
-    $('a').click(paintModal)
-});*/
+    /*$('a').click(paintModal)*/
+});
 
 $(document).ready(loadPage)
 
