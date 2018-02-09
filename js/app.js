@@ -61,7 +61,7 @@ $(document).ready(loadPage)
 
 function loadPage() {
     $('.slider').slider();
-    $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cuentos"&maxResults=10&langRestrict=es', function(data) {
+    $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cuentos+niños"&maxResults=40&langRestrict=es', function(data) {
         paintBookCard(data)
     });
 
@@ -151,19 +151,18 @@ function sendReview() {
 
 
 function paintReviews() {
-
+    $('#reviews').empty()
     var $title = ($(this).find('.title').text())
     var reviews = firebase.database().ref("reviews/");
-
     reviews.on("value", function(snapshot) {
         var obj = snapshot.val()
         for (var i in obj) {
-            if (obj[i]['title'] == $title) {
+
+            if ($title === obj[i]['title']) {
                 var $reviewDiv = $('<p />').text(obj[i]['review'])
                 $('#reviews').append($reviewDiv)
             }
         }
-
     })
 
 }
