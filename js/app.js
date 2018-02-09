@@ -58,7 +58,6 @@ function signUp(e) {
     $('a').click(paintModal)
 });*/
 
-
 $(document).ready(loadPage)
 
 function loadPage() {
