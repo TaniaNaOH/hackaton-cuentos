@@ -12,7 +12,7 @@ var provider = new firebase.auth.GoogleAuthProvider();
 $('#google').click(function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
         guardaDatos(result.user)
-        window.location.href = '../views/home.html'
+            // window.location.href = '../views/home.html'
     })
 })
 
@@ -59,7 +59,6 @@ function signUp(e) {
 $(document).ready(loadPage)
 
 function loadPage() {
-    $('.modal').modal();
     $('.slider').slider();
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cochinitos"&maxResults=10&langRestrict=es', function(data) {
         paintBookCard(data)
@@ -74,20 +73,20 @@ function loadPage() {
         paintBookCard(data)
     });
     $('#search-book').keyup(filterBooks)
-
+    $('.modal').modal();
 }
 
 function paintBookCard(data) {
     for (var i = 0; i < data['items'].length; i++) {
         if (data['items'][i]['volumeInfo']['imageLinks']) {
-            var $bookImage = $('<img />').attr('src', data['items'][i]['volumeInfo']['imageLinks']['smallThumbnail'])
+            var $bookImage = $('<img />', { 'class': 'pic' }).attr('src', data['items'][i]['volumeInfo']['imageLinks']['smallThumbnail'])
             var $bookDiv = $('<div />', { 'class': 'book-card' })
             var $bookLink = $('<a />', { 'class': 'waves-effect waves-light modal-trigger open-modal' })
             $bookLink.attr('href', '#modal1')
-            var $title = $('<h3 />').text(data['items'][i]['volumeInfo']['title'])
+            var $title = $('<h3 />', { 'class': 'title' }).text(data['items'][i]['volumeInfo']['title'])
             var $date = $('<p />', { 'class': 'date' }).text(data['items'][i]['volumeInfo']['publishedDate'])
             if (data['items'][i]['volumeInfo']['authors']) {
-                var $author = $('<p />').text(data['items'][i]['volumeInfo']['authors'][0])
+                var $author = $('<p />', { 'class': 'author' }).text(data['items'][i]['volumeInfo']['authors'][0])
             }
             $('#wrapper').append($bookDiv)
             $bookDiv.append($bookLink)
@@ -112,8 +111,13 @@ function filterBooks() {
 }
 
 
-
-
 function paintModal() {
-    console.log($(this).find('.date').text())
+    var $img = $(this).find('.pic').attr('src')
+    var $author = $(this).find('.author').text()
+    var $title = $(this).find('.title').text()
+    var $date = $(this).find('.date').text()
+    $('#pic').attr('src', $img)
+    $('#author').text($author)
+    $('#title').text($title)
+    $('#date').text($date)
 }
