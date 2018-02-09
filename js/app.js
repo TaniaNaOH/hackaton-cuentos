@@ -12,7 +12,6 @@ var provider = new firebase.auth.GoogleAuthProvider();
 $('#google').click(function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
         guardaDatos(result.user)
-
     })
 })
 
@@ -22,6 +21,7 @@ function guardaDatos(user) {
         nombre: user.displayName,
     }
     firebase.database().ref("usuarios/" + user.uid).set(usuario)
+    localStorage.user = user.displayName
 }
 
 
@@ -121,4 +121,18 @@ function paintModal() {
     $('#author').text($author)
     $('#title').text($title)
     $('#date').text($date)
+}
+
+$('#send-review').click(sendReview)
+
+function sendReview() {
+    bookId = new Date().getTime();
+    var title = $(this).siblings('h3').text()
+    var review = $('#write-review').val()
+
+    $('#write-review').val('')
+    firebase.database().ref("reviews/" + bookId).set({
+        title: title,
+        review: review
+    })
 }
