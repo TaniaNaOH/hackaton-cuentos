@@ -148,12 +148,15 @@ function sendReview() {
 
 
 function paintReviews() {
-    console.log('hola')
+    var $title = ($(this).find('.title').text())
     var reviews = firebase.database().ref("reviews/");
     reviews.on("value", function(snapshot) {
         var obj = snapshot.val()
-        console.log($(this).find('.title'))
-
+        for (var i in obj) {
+            if (obj[i]['title'] == $title) {
+                $('#reviews').append(obj[i]['review'])
+            }
+        }
 
     })
 
