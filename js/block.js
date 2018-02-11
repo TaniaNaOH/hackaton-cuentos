@@ -55,7 +55,7 @@ function typeText() {
     if ($(this).val().trim().length > 0) {
         $buttonSendText.removeAttr('disabled');
     } else {
-        $buttonSendText.attr('disabled', true);
+        disabledButton();
     }
 }
 
@@ -74,17 +74,15 @@ function sendText() {
     $contentText.append($text);
     //   // $typeTextTarea.append($buttonSendText);
     clearTextArea();
+    disabledButton();
 }
 
 function clearTextArea() {
     $typeTextTarea.val("");
 }
 
-// paintHTML();
-
-// // function sendText() {
-// //   $('#text').text($typeTextTarea.val());
-
-// // }
+function disabledButton() {
+    $buttonSendText.attr('disabled', true);
+}
 
 $(document).ready(loadPage);
