@@ -33,25 +33,7 @@ function mostrarDatos() {
     firebase.database().red("usuarios").get()
 }
 
-var $signUp = $('#sign-up').click(signUp);
-
-function signUp(e) {
-    e.preventDefault();
-    var $email = $('#email').val();
-    var $password = $('#password').val();
-    // console.log($email);
-    // console.log($password);
-    firebase.auth().createUserWithEmailAndPassword($email, $password)
-        .catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // console.log(errorCode);
-            // console.log(errorMessage);
-
-            // ...
-        });
-}
+// var $signUp = $('#sign-up').click(signUp);
 
 
 $(document).ready(function() {
@@ -59,13 +41,13 @@ $(document).ready(function() {
     /*$('a').click(paintModal)*/
 });
 
-$(document).ready(loadPage)
+$(document).ready(loadPage);
 
 function loadPage() {
 
     $('.slider').slider();
     $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cuentos+niños"&maxResults=40&langRestrict=es', function(data) {
-        paintBookCard(data)
+        paintBookCard(data);
     });
 
     /*
@@ -81,7 +63,7 @@ function loadPage() {
             paintBookCard(data)
         });
         */
-    $('#search-book').keyup(filterBooks)
+    $('#search-book').keyup(filterBooks);
     $('.modal').modal();
 
 }
@@ -89,25 +71,25 @@ function loadPage() {
 function paintBookCard(data) {
     for (var i = 0; i < data['items'].length; i++) {
         if (data['items'][i]['volumeInfo']['imageLinks']) {
-            var $bookImage = $('<img />', { 'class': 'pic' }).attr('src', data['items'][i]['volumeInfo']['imageLinks']['smallThumbnail'])
-            var $bookDiv = $('<div />', { 'class': 'book-card' })
-            var $bookLink = $('<a />', { 'class': 'waves-effect waves-light modal-trigger open-modal' })
-            $bookLink.attr('href', '#modal1')
-            var $title = $('<h3 />', { 'class': 'title' }).text(data['items'][i]['volumeInfo']['title'])
-            var $date = $('<p />', { 'class': 'date' }).text(data['items'][i]['volumeInfo']['publishedDate'])
+            var $bookImage = $('<img />', { 'class': 'pic' }).attr('src', data['items'][i]['volumeInfo']['imageLinks']['smallThumbnail']);
+            var $bookDiv = $('<div />', { 'class': 'book-card' });
+            var $bookLink = $('<a />', { 'class': 'waves-effect waves-light modal-trigger open-modal' });
+            $bookLink.attr('href', '#modal1');
+            var $title = $('<h3 />', { 'class': 'title' }).text(data['items'][i]['volumeInfo']['title']);
+            var $date = $('<p />', { 'class': 'date' }).text(data['items'][i]['volumeInfo']['publishedDate']);
             if (data['items'][i]['volumeInfo']['authors']) {
-                var $author = $('<p />', { 'class': 'author' }).text(data['items'][i]['volumeInfo']['authors'][0])
+                var $author = $('<p />', { 'class': 'author' }).text(data['items'][i]['volumeInfo']['authors'][0]);
             }
-            $('#wrapper').append($bookDiv)
-            $bookDiv.append($bookLink)
-            $bookLink.append($bookImage)
-            $bookLink.append($title)
-            $bookLink.append($author)
-            $bookLink.append($date)
+            $('#wrapper').append($bookDiv);
+            $bookDiv.append($bookLink);
+            $bookLink.append($bookImage);
+            $bookLink.append($title);
+            $bookLink.append($author);
+            $bookLink.append($date);
         }
     }
-    $('.open-modal').click(paintModal)
-    $('.open-modal').click(paintReviews)
+    $('.open-modal').click(paintModal);
+    $('.open-modal').click(paintReviews);
 
 
 }
@@ -117,9 +99,9 @@ function filterBooks() {
     var search = $('#search-book').val().trim().toLowerCase();
     $('h3').each(function() {
         if ($(this).text().toLowerCase().indexOf(search) === -1) {
-            $(this).closest('div').hide()
+            $(this).closest('div').hide();
         } else {
-            $(this).closest('div').show()
+            $(this).closest('div').show();
         }
     })
 }
@@ -127,13 +109,14 @@ function filterBooks() {
 
 function paintModal() {
     var $img = $(this).find('.pic').attr('src')
-    var $author = $(this).find('.author').text()
-    var $title = $(this).find('.title').text()
-    var $date = $(this).find('.date').text()
-    $('#pic').attr('src', $img)
-    $('#author').text($author)
-    $('#title').text($title)
-    $('#date').text($date)
+    var $author = $(this).find('.author').text();
+    var $title = $(this).find('.title').text();
+    var $date = $(this).find('.date').text();
+    $('#pic').attr('src', $img);
+    $('#author').text($author);
+    $('#title').text($title);
+    $('#date').text($date);
+    filterBooks();
 }
 
 $('#send-review').click(sendReview)
@@ -152,16 +135,16 @@ function sendReview() {
 
 
 function paintReviews() {
-    $('#reviews').empty()
+    $('#reviews').empty();
     var reviews = firebase.database().ref("reviews/");
     reviews.on("value", function(snapshot) {
         $('#reviews').empty();
         var $title = $('.modal-content #title').text();
-        var obj = snapshot.val()
+        var obj = snapshot.val();
         for (var i in obj) {
             if ($title === obj[i]['title']) {
-                var $reviewDiv = $('<p />').text(obj[i]['review'])
-                $('#reviews').append($reviewDiv)
+                var $reviewDiv = $('<p />').text(obj[i]['review']);
+                $('#reviews').append($reviewDiv);
             }
         }
     })
