@@ -53,36 +53,44 @@
         </div>
       </div>
     </div>
-  </div>
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5>Erase una vez...</h5>
-          <h6>La app de entretenimiento familiar.</h6>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5>Erase una vez...</h5>
+                    <h6>La app de entretenimiento familiar.</h6>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-copyright center">
-      <h5>© 2018 LABORATORIA.</h5>
-    </div>
-    <!-- DARLE ESTILO -->
-    <div id="modal1" class="modal">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right">X</a>
-      <div class="modal-content black">
-        <img id="pic" alt="">
-        <h3 id="title"></h3>
-        <p id="author"></p>
-        <p id="date">Hola</p>
-        <textarea name="" id="write-review" cols="30" rows="10" placeholder="¿Qué parte del libro te gustó más?"></textarea>
-        <button id="send-review">Enviar reseña</button>
-        <div id="reviews">Reseñas</div>
-      </div>
-    </div>
+        <div class="footer-copyright center">
+            <h5>© 2018 LABORATORIA.</h5>
+        </div>
+
+        <!-- DARLE ESTILO -->
+        <div id="modal1" class="modal">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right">X</a>
+            <div class="modal-content">
+              <div class="row">
+                <div class="col l12 s12">
+                  <div class="col l6 s7">
+                    <img id="pic" alt="">
+                  </div>
+                  <div class="col l6 s5 ">
+                    <h3 id="title"></h3>
+                    <p id="author"></p>
+                    <p id="date">Hola</p>
+                  </div>
+                </div>
+              </div>
+                <textarea name="" id="write-review" cols="30" rows="10" placeholder="¿Qué parte del libro te gustó más?"></textarea>
+                <button class="blue lighten-2" id="send-review">Enviar reseña</button>
+                <div id="reviews">Reseñas</div>
+          </div> 
   </footer>
   <script type="text/javascript" src="../js/jquery.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
   <script type="text/javascript" src="../js/materialize.min.js"></script>
   <script src="../js/app.js"></script>
 </body>
+
 </html>

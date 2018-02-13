@@ -49,7 +49,7 @@ a,
 }
 
  ::placeholder {
-    color: grey;
+    color: #1da1f2;
 }
 
 body>div.container>div {
@@ -84,7 +84,7 @@ body>footer>div.container>div>div>h5 {
 }
 
 h3 {
-    color: black;
+    color: white;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -123,3 +123,19 @@ h7 {
     border-radius: 8px;
     background-color: pink;
 }
+
+
+
+#send-review {
+  border: none;
+  width: 40vw;
+}
+
+#write-review {
+background: white;
+border: 5px solid #007bff;
+}
+.modal-content {
+  background-color: #38B1E5;
+}
+
