@@ -1,3 +1,7 @@
+$(document).ready(function(){
+     $('.slider').slider();
+   });
+
 var config = {
     apiKey: "AIzaSyDdE1ReaIOr_OAGOjc9xglzpZSOCOuSts0",
     authDomain: "conchita-344a5.firebaseapp.com",
@@ -54,8 +58,8 @@ function loadPage() {
         $.getJSON('https://www.googleapis.com/books/v1/volumes?q="cochinitos"&maxResults=10&langRestrict=es', function(data) {
             paintBookCard(data)
         });
-        
-        
+
+
         $.getJSON('https://www.googleapis.com/books/v1/volumes?q="herweck+rice"&maxResults=10&langRestrict=es', function(data) {
             paintBookCard(data)
         });

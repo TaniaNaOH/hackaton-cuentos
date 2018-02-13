@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center 125px;
     background-attachment: fixed;
-}
+ }
 
 .nav-wrapper,
 .nav-extended {
@@ -18,13 +18,15 @@ footer {
     background-image: url(../assets/img/cubos.jpg);
     font-size: 20px;
     font-weight: bold;
+    flex: 1 0 auto;
 }
 
-.slider .slides li img {
-    height: 100vh;
-    margin: 0 auto;
-    width: 100%;
-    margin-top: 18px;
+.slider .slides ul li img {
+  height: 100vh;
+  margin: auto;
+  width: 400%;
+  overflow: hidden;
+  padding: 0;
 }
 
 a,
@@ -109,6 +111,7 @@ h7 {
     background-color: white;
     font-weight: bold;
 }
+
 
 #type-text {
     background-image: url(../assets/img/hoja2.jpg);
