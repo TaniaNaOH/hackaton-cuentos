@@ -64,20 +64,6 @@ Google Books
 - Block de notas para que los niños estimulen sus actividades de lecto-escritura
 
 
-### scketsh
-
-login
-![sketch1](assets/images/sketch1.jpg)
-
-Home
-![sketch5](assets/images/sketch5.jpg)
-
-Biblioteca
-![sketch3](assets/images/sketch3.jpg)
-
-Block
-![sketch2](assets/images/sketch2.jpg)
-
 ### Investigación
 
 Los niños de 6 a 12 años  comienzan a desarrollar sus habilidades, aprenden a leer y escribir  con mayor o menor dificultad y esfuerzo, cada uno a su ritmo, todos lo han conseguido. Cuando leemos se activan procesos cognitivos que enriquecen la mente e incrementa la felicidad.
