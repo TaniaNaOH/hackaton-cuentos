@@ -110,7 +110,7 @@ Solución
 
 Buscar lectura lúdica y divertida, que no tiene por qué ser intrascendente, que la lectura les permita interactuar imaginar y que tenga ilustraciones atractivas para que la lectura sea más divertida lo que leen les tiene que gustar.
 
-##Érase una vez
+## Érase una vez
 
 De esta manera  permitimos que los niños puedan entretenerse y ser capaces de pensar, decir, sentir y crear con la compañía de un adulto y que mejor realizarlo con sus familiares como un momento en el que disfruten a su vez podrán ampliar los lazos afectivos.
 
