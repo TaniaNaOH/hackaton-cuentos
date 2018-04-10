@@ -117,3 +117,15 @@ De esta manera  permitimos que los niños puedan entretenerse y ser capaces de p
 Tendrán la opción de elegir un libro  para  interactuar como si fuera un juguete o un nuevo amigo.Si realizamos estas actividade nuestros niños pueden recordar el cuento como un momento de placer, tranquilidad, amor y entrega aprenderá rápida y fácilmente.
 
 Ponemos a su disposición esta aplicación con la que el niño jugará y aprenderá con lecturas interesantes y podrá compartirlo con su familia utilizando nuevas tecnologías de manera segura garantizando la experiencia para su desarrollo integral.
+
+
+![erase2](https://user-images.githubusercontent.com/32877064/38588137-e41c9676-3ce9-11e8-8f77-cb6a5b37ceec.png)
+
+
+![erase3](https://user-images.githubusercontent.com/32877064/38588138-e4369404-3ce9-11e8-9cda-71f2eb22f3b8.png)
+
+
+![erasebiblio1](https://user-images.githubusercontent.com/32877064/38588139-e4523ec0-3ce9-11e8-9799-13dfb16e1b94.png)
+
+
+![erase4](https://user-images.githubusercontent.com/32877064/38588143-e91922ca-3ce9-11e8-9e6a-821816cc0f7a.png)
