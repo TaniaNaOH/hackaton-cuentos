@@ -1,6 +1,6 @@
 # ÉRASE UNA VEZ...
 # Objetivo del proyecto:
-Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
+# Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
 
 
 #### SQUAD:
@@ -117,7 +117,7 @@ Tendrán la opción de elegir un libro  para  interactuar como si fuera un jugue
 
 Ponemos a su disposición esta aplicación con la que el niño jugará y aprenderá con lecturas interesantes y podrá compartirlo con su familia utilizando nuevas tecnologías de manera segura garantizando la experiencia para su desarrollo integral.
 
-
+## Página de inicio con opcion de Login o Registro.
 ![erase2](https://user-images.githubusercontent.com/32877064/38588137-e41c9676-3ce9-11e8-8f77-cb6a5b37ceec.png)
 
 
