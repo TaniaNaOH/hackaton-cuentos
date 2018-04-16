@@ -1,6 +1,6 @@
 # ÉRASE UNA VEZ...
-# Objetivo del proyecto:
-# Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
+## Objetivo del proyecto:
+### Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
 
 
 #### SQUAD:
@@ -117,14 +117,14 @@ Tendrán la opción de elegir un libro  para  interactuar como si fuera un jugue
 
 Ponemos a su disposición esta aplicación con la que el niño jugará y aprenderá con lecturas interesantes y podrá compartirlo con su familia utilizando nuevas tecnologías de manera segura garantizando la experiencia para su desarrollo integral.
 
-## Página de inicio con opcion de Login o Registro.
+## Página de inicio con opción de Login o Registro.
 ![erase2](https://user-images.githubusercontent.com/32877064/38588137-e41c9676-3ce9-11e8-8f77-cb6a5b37ceec.png)
 
-
+## Página de inicio con ranking de los libros mas leídos en la semana
 ![erase3](https://user-images.githubusercontent.com/32877064/38588138-e4369404-3ce9-11e8-9cda-71f2eb22f3b8.png)
 
-
+## Biblioteca infantil con opción de busqueda de libros en orden alfabetico y ventana dinamica para dejar reseñas y valoraciones
 ![erasebiblio1](https://user-images.githubusercontent.com/32877064/38588139-e4523ec0-3ce9-11e8-9799-13dfb16e1b94.png)
 
-
+## Block de notas para crear tus propios cuentos
 ![erase4](https://user-images.githubusercontent.com/32877064/38588143-e91922ca-3ce9-11e8-9e6a-821816cc0f7a.png)
