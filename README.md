@@ -1,6 +1,6 @@
-# ÉRASE UNA VEZ...
+# ERASE UNA VEZ...
 ## Objetivo del proyecto:
-### Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
+## Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
 
 
 #### SQUAD:
