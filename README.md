@@ -1,4 +1,7 @@
-## ÉRASE UNA VEZ...
+# ÉRASE UNA VEZ...
+# Objetivo del proyecto:
+Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
+
 
 #### SQUAD:
 
@@ -6,10 +9,6 @@
 - Tania Dalila Sosa Ramírez
 - Nancy Santana Hernández
 - Elizabeth Guerrero Torres
-
-
-### Objetivo del proyecto:
-Crear una aplicación compartida para padres e hijos que se enfoque en acercar a los niños de entre seis y doce años y sus padres al mundo de la literatura como alternativa de entretenimiento familiar mientras se promueven las habilidades de lecto-escritura.
 
 ### Justificación del tema:
 La lectura de comprensión supone un esfuerzo aún muy grande para los niños, mientras el sistema escolar fomenta la lectura mecánica y monótona para que el hábito contribuya a mejorar dichas habilidaes. Por tal motivo es necesario el fomento de la lectura lúdica y divertida, que permita interactuar con diferentes temas y estimule la imaginación.
